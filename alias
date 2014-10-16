@@ -1,0 +1,18 @@
+## Bash
+alias sb='source ~/.bash_profile'
+alias rm='rm -i'
+alias ls='ls -G'
+alias ll='ls -l'
+alias grep='grep --color=auto'
+
+#alias rmpyc='rm -f *.pyc'
+
+## node
+alias node='node --harmony'
+
+## git
+alias gs='git status'
+alias gb='git branch'
+
+## editor
+alias em='emacs'
