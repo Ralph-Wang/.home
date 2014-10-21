@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo $PATH | awk -v RS=':' '{print $0}'
