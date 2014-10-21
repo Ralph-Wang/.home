@@ -28,7 +28,7 @@ flush_prompt() {
 PROMPT_COMMAND="flush_prompt; $PROMPT_COMMAND"
 
 
-export PATH=$PATH:$HOME/.bin
+export PATH=$HOME/.bin:$PATH
 
 # from kumu-linux -- color the man
 export LESS_TERMCAP_mb=$'\E[01;31m'
