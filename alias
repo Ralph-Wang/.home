@@ -18,6 +18,3 @@ alias node='node --harmony'
 ## git
 alias gs='git status'
 alias gb='git branch'
-
-## editor
-alias em='emacs'
