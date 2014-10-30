@@ -1,7 +1,12 @@
 ## Bash
 alias sb='source ~/.bash_profile'
 alias rm='rm -i'
-alias ls='ls -G'
+if [ `uname` == "Linux" ];then
+    alias ls='ls -color=auto'
+else
+    alias ls='ls -G'
+
+
 alias ll='ls -l'
 alias grep='grep --color=auto'
 
