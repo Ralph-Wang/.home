@@ -2,7 +2,7 @@
 alias sb='source ~/.bash_profile'
 alias rm='rm -i'
 if [ `uname` == "Linux" ];then
-    alias ls='ls -color=auto'
+    alias ls='ls --color=auto'
 else
     alias ls='ls -G'
 fi
