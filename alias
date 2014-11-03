@@ -19,3 +19,6 @@ alias node='node --harmony'
 ## git
 alias gs='git status'
 alias gb='git branch'
+
+## tmux
+alias tmux='tmux -2'
