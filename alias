@@ -3,13 +3,14 @@ alias sb='source ~/.bash_profile'
 alias rm='rm -i'
 if [ `uname` == "Linux" ];then
     alias ls='ls --color=auto'
+    alias grep='grep --color=auto -P'
 else
     alias ls='ls -G'
+    alias grep='grep --color=auto -E'
 fi
 
 
 alias ll='ls -l'
-alias grep='grep --color=auto'
 
 #alias rmpyc='rm -f *.pyc'
 
