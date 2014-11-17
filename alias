@@ -18,8 +18,11 @@ alias ll='ls -l'
 alias node='node --harmony'
 
 ## git
-alias gs='git status'
-alias gb='git branch'
+git alias st status
+git alias ci commit
+git alias diffs "diff --staged"
+git alias lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
 
 ## tmux
 alias tmux='tmux -2'
