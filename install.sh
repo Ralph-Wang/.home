@@ -15,4 +15,7 @@ touch ~/.home/bash_profile.local
 ln -sf ~/.home/bash_profile.local ~/.bash_profile.local
 
 # commands
+/bin/rm -rf ~/.bin
 ln -sf ~/.home/bin ~/.bin
+
+source ~/.bash_profile
