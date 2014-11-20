@@ -12,14 +12,14 @@ fi
 
 alias ll='ls -l'
 
-#alias rmpyc='rm -f *.pyc'
 
 ## node
 alias node='node --harmony'
 
-## git
+## git 需要安装 git-extra
 git alias st status
 git alias ci commit
+git alias co checkout
 git alias diffs "diff --staged"
 git alias lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 
