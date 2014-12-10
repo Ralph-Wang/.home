@@ -23,6 +23,7 @@ git alias co checkout
 git alias br branch
 git alias diffs "diff --staged"
 git alias lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git alias ls ls-files
 
 
 ## tmux
