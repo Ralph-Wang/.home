@@ -17,7 +17,7 @@ alias ll='ls -l'
 alias node='node --harmony'
 
 ## git 需要安装 git-extra
-git alias st status
+git alias st "status -s"
 git alias ci commit
 git alias co checkout
 git alias br branch
