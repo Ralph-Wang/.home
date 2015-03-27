@@ -48,3 +48,6 @@ source ~/.bash_profile.local # 本地配置, 不进入 git 管理
 
 # unbind C-s for stop stty
 stty stop undef
+
+# load rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && rvm default
