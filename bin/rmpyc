@@ -1,9 +1,3 @@
 #!/bin/bash
 
-#set -x
-
-pycs=`find . -name "*.pyc"`
-
-for pyc in $pycs;do
-    rm -f $pyc
-done
+find . -name "*.pyc" |xargs rm -f

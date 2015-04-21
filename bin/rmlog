@@ -2,8 +2,4 @@
 
 #set -x
 
-pycs=`find . -name "*.log"`
-
-for pyc in $pycs;do
-    rm -f $pyc
-done
+find . -name "*.log" |xargs rm -f 
