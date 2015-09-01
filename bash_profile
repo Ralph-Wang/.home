@@ -12,6 +12,12 @@ export EDITOR=vim
 ###########
 flush_prompt() {
 	RSLT=''
+
+    if [[ "$VIRTUAL_ENV" ]]; then
+		RSLT="[\[\033[33m\]py:\[\033[35m\]$(basename $VIRTUAL_ENV)\[\033[0m\]]"
+        #statements
+    fi
+
 	GIT_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/^* //'`
 	if [ "$GIT_BRANCH" ]
 	then
@@ -23,7 +29,7 @@ flush_prompt() {
 		else
 			CLR='3'
 		fi
-		RSLT="@\[\033[3${CLR}m\]${GIT_BRANCH}\[\033[0m\]"
+		RSLT="${RSLT}@\[\033[3${CLR}m\]${GIT_BRANCH}\[\033[0m\]"
 	fi
     export PS1="\[\033[35m\][$$]\[\033[33m\](!\! j:\j)\[\033[0m\]@\[\033[1;31m\]\h\[\033[0m\]\[\033[32m\][\w]\[\033[0m\]$RSLT\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\] -> \[\033[0m\]"
 }
