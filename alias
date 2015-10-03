@@ -17,13 +17,13 @@ alias ll='ls -l'
 alias node='node --harmony'
 
 ## git 需要安装 git-extra
-git alias st "status -s"
-git alias ci commit
-git alias co checkout
-git alias br branch
-git alias diffs "diff --staged"
-git alias lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-git alias ls ls-files
+git alias st "status -s" &>/dev/null
+git alias ci commit &>/dev/null
+git alias co checkout &>/dev/null
+git alias br branch &>/dev/null
+git alias diffs "diff --staged" &>/dev/null
+git alias lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" &>/dev/null
+git alias ls ls-files &>/dev/null
 
 
 ## tmux
