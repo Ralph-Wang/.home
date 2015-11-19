@@ -2,5 +2,5 @@
 
 
 for i in $@;do
-    awk 'BEGIN{srand()} {b[rand()NR]=$0} END{for (i in b) print b[i]}' $i > tmp && mv tmp $i
+    awk 'BEGIN{srand()} {b[rand()NR]=$0} END{for (i in b) print b[i]}' $i > .tmp && mv .tmp $i
 done
