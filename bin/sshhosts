@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 
-sed '/^\s*#/d' ~/.ssh/config| sed -n '/^Host/{N;s/ *Host[a-zA-Z]* *//g;s/\n/\t=> /p;}'
+sed '/^\s*#/d' ~/.ssh/config| sed -n '/^Host/{N;s/ *Host[a-zA-Z]* *//g;s/\n/  => /p;}'
