@@ -21,7 +21,7 @@ flush_prompt() {
 	GIT_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/^* //'`
 	if [ "$GIT_BRANCH" ]
 	then
-		GIT_STATUS=`git status 2> /dev/null | grep 'working directory clean'`
+		GIT_STATUS=`git status 2> /dev/null | grep 'working tree clean'`
 		CLR='2'
 		if [ "$GIT_STATUS" ]
 		then
