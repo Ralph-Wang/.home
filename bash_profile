@@ -54,6 +54,8 @@ source ~/.profile
 
 source ~/.alias
 
+source ~/.cdmark
+
 source ~/.bash_profile.local # 本地配置, 不进入 git 管理
 
 # unbind C-s for stop stty

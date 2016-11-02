@@ -1,0 +1,43 @@
+
+export _MARKPATH=$HOME/.cdmarks
+export _MARKDEFAULT=_default   # default mark
+
+
+function g {
+    local m=$1
+    if [[ "$m" == "" ]]; then
+        m=$_MARKDEFAULT
+    fi
+    cd -P $_MARKPATH/$m 2>/dev/null || echo "No such mark: $m"
+}
+
+function mark {
+    mkdir -p $_MARKPATH
+    local m=$1
+    if [[ "$m" == "" ]]; then
+        m=$_MARKDEFAULT
+    fi
+    rm -f $_MARKPATH/$m
+    ln -s $(pwd) $_MARKPATH/$m
+}
+
+function unmark {
+    local m=$1
+    if [[ "$m" == "" ]]; then
+        m=$_MARKDEFAULT
+    fi
+    rm -i $_MARKPATH/$m
+}
+
+function gs {
+    ls -l $_MARKPATH | grep ^l | cut -d' ' -f 13-
+}
+
+function _completemarks {
+    local curw=${COMP_WORDS[COMP_CWORD]}
+    local wordlist=$(ls -l "$_MARKPATH" |grep ^l | cut -d ' ' -f 13)
+    COMPREPLY=$(compgen -W '${wordlist[@]}' -- "$curw")
+    return 0
+}
+
+complete -F _completemarks g unmark

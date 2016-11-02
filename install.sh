@@ -7,6 +7,9 @@ ln -sf ~/.home/bash_profile ~/.bash_profile
 # .alias
 ln -sf ~/.home/alias ~/.alias
 
+# .cdmark
+ln -sf ~/.home/cdmark ~/.cdmark
+
 # tmux config
 ln -sf ~/.home/tmux.conf ~/.tmux.conf
 
