@@ -30,7 +30,7 @@ function unmark {
 }
 
 function gs {
-    ls -l $_MARKPATH | grep ^l | cut -d' ' -f 13-
+    ls -l ~/.cdmarks/ |grep ^l|awk '{for(i=9;i<=NF;i++) {printf $i" ";if (i==NF) printf "\n"} }'
 }
 
 function _completemarks {
