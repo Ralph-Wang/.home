@@ -35,7 +35,7 @@ function gs {
 
 function _completemarks {
     local curw=${COMP_WORDS[COMP_CWORD]}
-    local wordlist=$(ls -l "$_MARKPATH" |grep ^l | cut -d ' ' -f 13)
+    local wordlist=$(ls "$_MARKPATH")
     COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
     return 0
 }
