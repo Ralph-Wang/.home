@@ -13,12 +13,19 @@ ln -sf ~/.home/cdmark ~/.cdmark
 # tmux config
 ln -sf ~/.home/tmux.conf ~/.tmux.conf
 
+# git completion
+ln -sf ~/.home/git-completion.bash ~/.git-completion.bash
+
 # local file
 touch ~/.home/bash_profile.local
 ln -sf ~/.home/bash_profile.local ~/.bash_profile.local
+
 
 # commands
 /bin/rm -rf ~/.bin
 ln -sf ~/.home/bin ~/.bin
 
 source ~/.bash_profile
+
+echo "install over."
+echo "enjoy your terminal life."
