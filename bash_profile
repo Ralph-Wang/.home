@@ -52,11 +52,11 @@ eval "$(pip completion --bash)"
 
 source ~/.profile
 
-source ~/.alias
+source ~/.home/alias
 
-source ~/.cdmark
+source ~/.home/cdmark
 
-source ~/.bash_profile.local # 本地配置, 不进入 git 管理
+source ~/.home/bash_profile.local # 本地配置, 不进入 git 管理
 
 # unbind C-s for stop stty
 stty stop undef
