@@ -1,23 +1,28 @@
 _ssh() {
     local cur prev opts config_files configd files configs
-    COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
-    # complete for ssh configs
+    ## complete for ssh configs
     config_files="$HOME/.ssh/config"
     configd="$HOME/.ssh/config.d"
+
+    # ensure the directory is exist
     if [[ -d $configd && $(ls $configd|wc -l) -gt 0 ]]; then
         config_files="$config_files $HOME/.ssh/config.d/*"
     fi
+
+    # get ssh configs
     configs=$(grep '^Host' $config_files | grep -v '[?*]' | cut -d ' ' -f 2-)
+    ## complete for ssh configs end
 
     # copmlete for directories
     files=$(ls -d $cur* 2>/dev/null)
 
-    # merge all candinate
+    # merge all candinates
     opts="${configs[*]} ${files[*]}"
 
+    COMPREPLY=() # clean up to escape from other functions
     COMPREPLY=( $(compgen -W "$opts" -- ${cur}) )
     return 0
 }
