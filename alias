@@ -1,4 +1,5 @@
 ## Bash
+alias vimsshconfig='vim ~/.ssh/config'
 alias sb='source ~/.bash_profile'
 alias rm='rm -i'
 if [ `uname` == "Linux" ];then
