@@ -7,6 +7,7 @@ fi
 # User specific environment and startup programs
 
 export EDITOR=vim
+export LC_ALL=zh_CN.UTF-8
 ###########
 # prompt
 ###########
