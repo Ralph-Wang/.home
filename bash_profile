@@ -8,6 +8,7 @@ fi
 
 export EDITOR=vim
 export LC_ALL=zh_CN.UTF-8
+export PYTHONSTARTUP=$HOME/.home/pythonstartup
 ###########
 # prompt
 ###########
