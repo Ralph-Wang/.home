@@ -1,5 +1,4 @@
 ## Bash
-alias python='ipython'
 alias vimsshconfig='vim ~/.ssh/config'
 alias sb='source ~/.bash_profile'
 alias rm='rm -i'
