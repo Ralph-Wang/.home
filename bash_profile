@@ -5,10 +5,6 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 # User specific environment and startup programs
-
-export EDITOR=vim
-export LC_ALL=zh_CN.UTF-8
-export PYTHONSTARTUP=$HOME/.home/pythonstartup
 ###########
 # prompt
 ###########
@@ -77,3 +73,6 @@ source ~/.home/git-completion.bash
 
 # enable ssh completion
 source ~/.home/ssh-completion.bash
+
+# source other environments
+source ~/.home/environments

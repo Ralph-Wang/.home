@@ -1,0 +1,8 @@
+## system
+export EDITOR=vim
+export LC_ALL=zh_CN.UTF-8
+
+
+## python
+export PIP_REQUIRE_VIRTUALENV=true
+export PYTHONSTARTUP=$HOME/.home/pythonstartup
