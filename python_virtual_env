@@ -1,0 +1,19 @@
+export _VIRTUAL_ENV_HOME=$HOME/.pyenv
+
+function pyactivate() {
+    env=${1:?"env is required"}
+    source $_VIRTUAL_ENV_HOME/$env/bin/activate
+}
+
+function pylist() {
+    ls $_VIRTUAL_ENV_HOME
+}
+
+function _completevenvs {
+    local curw=${COMP_WORDS[COMP_CWORD]}
+    local wordlist=$(ls "$_VIRTUAL_ENV_HOME")
+    COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
+    return 0
+}
+
+complete -F _completevenvs pyactivate 
