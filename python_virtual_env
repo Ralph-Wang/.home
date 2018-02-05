@@ -9,6 +9,12 @@ function pylist() {
     ls $_VIRTUAL_ENV_HOME
 }
 
+function pycreate() {
+    env=${1:?"env is required"}
+    virtualenv=${2:-"virtualenv"}
+    eval "$virtualenv $_VIRTUAL_ENV_HOME/$env"
+}
+
 function _completevenvs {
     local curw=${COMP_WORDS[COMP_CWORD]}
     local wordlist=$(ls "$_VIRTUAL_ENV_HOME")
