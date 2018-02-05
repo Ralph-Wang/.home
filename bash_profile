@@ -4,10 +4,8 @@
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
-# User specific environment and startup programs
-###########
+
 # prompt
-###########
 flush_prompt() {
 	RSLT=''
 
@@ -33,32 +31,10 @@ flush_prompt() {
 }
 PROMPT_COMMAND="flush_prompt; $PROMPT_COMMAND"
 
-
-export PATH=$HOME/.bin:$HOME/.local/bin:$PATH
-
-# from kumu-linux -- color the man
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-
 # pip bash completion start
 eval "$(pip completion --bash)"
 
-source ~/.profile
-
-source ~/.home/alias
-
-source ~/.home/cdmark
-
-source ~/.home/python_virtual_env
-
-source ~/.home/bash_profile.local # 本地配置, 不进入 git 管理
-
-# unbind C-s for stop stty
+# unbind C-s to stop stty
 stty stop undef
 
 # load rvm
@@ -69,6 +45,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+source ~/.profile
+
+source ~/.home/alias
+
+source ~/.home/cdmark
+
+source ~/.home/python_virtual_env
 
 # enable git completion
 source ~/.home/git-completion.bash
@@ -78,3 +61,5 @@ source ~/.home/ssh-completion.bash
 
 # source other environments
 source ~/.home/environments
+
+source ~/.home/bash_profile.local # 本地配置, 不进入 git 管理
