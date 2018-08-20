@@ -31,9 +31,6 @@ flush_prompt() {
 }
 PROMPT_COMMAND="flush_prompt; $PROMPT_COMMAND"
 
-# pip bash completion start
-eval "$(pip completion --bash)"
-
 # unbind C-s to stop stty
 stty stop undef
 
@@ -53,13 +50,22 @@ source ~/.home/cdmark
 
 source ~/.home/python_virtual_env
 
+# source other environments
+source ~/.home/environments
+
 # enable git completion
 source ~/.home/git-completion.bash
 
 # enable ssh completion
 source ~/.home/ssh-completion.bash
 
-# source other environments
-source ~/.home/environments
+# enable pyenv init
+if command -v pyenv 1>/dev/null 2>&1;then
+    eval "$(pyenv init -)"
+fi
+
+# pip bash completion start
+eval "$(pip completion --bash)"
+
 
 source ~/.home/bash_profile.local # 本地配置, 不进入 git 管理
