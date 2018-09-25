@@ -1,4 +1,4 @@
-export _VIRTUAL_ENV_HOME=$HOME/.pyenv
+export _VIRTUAL_ENV_HOME=$HOME/.pyvenv
 
 function _ensure_home() {
     if [[ -d $_VIRTUAL_ENV_HOME ]]; then
