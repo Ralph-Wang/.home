@@ -2,7 +2,7 @@
 
 export PATH=$HOME/.bin:$HOME/.local/bin:$PATH
 export EDITOR=vim
-export LC_ALL=zh_CN.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # from kumu-linux -- color the man
 
