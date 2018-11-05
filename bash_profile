@@ -34,9 +34,6 @@ PROMPT_COMMAND="flush_prompt; $PROMPT_COMMAND"
 # unbind C-s to stop stty
 stty stop undef
 
-# load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && rvm default
-
 # nvm init
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
