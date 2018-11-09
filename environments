@@ -26,4 +26,4 @@ export PYTHON_CONFIGURE_OPTS="--enable-framework"
 
 ## go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
+export PATH=$GOPATH/bin:/usr/local/vim/bin:$PATH

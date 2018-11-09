@@ -26,6 +26,11 @@ function pycreate() {
     eval "$virtualenv $_VIRTUAL_ENV_HOME/$env"
 }
 
+function pyremove() {
+    env=${1:?"env is required"}
+    eval "rm -rf $_VIRTUAL_ENV_HOME/$env"
+}
+
 function _completevenvs {
     local curw=${COMP_WORDS[COMP_CWORD]}
     _ensure_home > /dev/null
@@ -34,4 +39,4 @@ function _completevenvs {
     return 0
 }
 
-complete -F _completevenvs pyactivate 
+complete -F _completevenvs pyactivate pyremove
