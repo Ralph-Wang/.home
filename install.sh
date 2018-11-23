@@ -4,6 +4,9 @@
 # .bash_profile
 ln -sf ~/.home/bash_profile ~/.bash_profile
 
+# .inputrc
+ln -sf ~/.home/inputrc ~/.inputrc
+
 # tmux config
 ln -sf ~/.home/tmux.conf ~/.tmux.conf
 

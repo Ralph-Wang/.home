@@ -1,0 +1,5 @@
+# If ~./inputrc doesn't exist yet, first include the original /etc/inputrc so we don't override it
+$include /etc/inputrc'
+
+# Add option to ~/.inputrc to enable case-insensitive tab completion
+set completion-ignore-case On
