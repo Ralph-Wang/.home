@@ -51,10 +51,13 @@ source ~/.home/python_virtual_env
 source ~/.home/environments
 
 # enable git completion
-source ~/.home/git-completion.bash
+source ~/.home/completion.d/git-completion.bash
 
 # enable ssh completion
-source ~/.home/ssh-completion.bash
+source ~/.home/completion.d/ssh-completion.bash
+
+# enable gradle completion
+source ~/.home/completion.d/gradle-completion.bash
 
 # enable pyenv init
 if command -v pyenv 1>/dev/null 2>&1;then
