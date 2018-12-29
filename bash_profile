@@ -9,9 +9,12 @@ fi
 flush_prompt() {
 	RSLT=''
 
+    if [[ "$(command -v pyenv)" != "" ]]; then
+		RSLT="[\[\033[33m\]pyenv:\[\033[35m\]$(pyenv version-name)\[\033[0m\]]"
+    fi
+
     if [[ "$VIRTUAL_ENV" ]]; then
-		RSLT="[\[\033[33m\]py:\[\033[35m\]$(basename $VIRTUAL_ENV)\[\033[0m\]]"
-        #statements
+		RSLT="[\[\033[33m\]pyvenv:\[\033[35m\]$(basename $VIRTUAL_ENV)\[\033[0m\]]"
     fi
 
 	GIT_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/^* //'`
