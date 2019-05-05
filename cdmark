@@ -18,8 +18,8 @@ function mark {
         m=$_MARKDEFAULT
     fi
     if [[ "$m" == "-" ]]; then
-        # use - to mark as current directory name
-        m=$(basename $(pwd))
+        # use - to mark as current directory name in lower case
+        m=$(basename $(pwd)|tr [:upper:] [:lower:])
     fi
     rm -f $_MARKPATH/$m
     ln -s $(pwd) $_MARKPATH/$m
