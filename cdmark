@@ -38,7 +38,7 @@ function unmark {
 }
 
 function gs {
-    ls -l ~/.cdmarks/ |grep ^l|awk '{for(i=9;i<=NF;i++) {printf $i" ";if (i==NF) printf "\n"} }'
+    ls -al ~/.cdmarks/ |grep ^l|awk '{for(i=9;i<=NF;i++) {printf $i" ";if (i==NF) printf "\n"} }'
 }
 
 function _completemarks {
