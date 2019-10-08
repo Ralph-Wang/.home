@@ -44,6 +44,8 @@ export NVM_DIR="$HOME/.nvm"
 
 source ~/.profile
 
+source ~/.home/commands
+
 source ~/.home/alias
 
 source ~/.home/cdmark
