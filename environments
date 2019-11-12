@@ -34,3 +34,5 @@ export PATH=$GOPATH/bin:$PATH
 ## homebrew bottle mirror
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
+## nvm mirrors
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
