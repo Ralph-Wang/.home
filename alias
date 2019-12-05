@@ -1,7 +1,6 @@
 ## Bash
-alias rs='source ~/.bash_profile'
+alias sr='source ~/.bash_profile'
 alias vimsshconfig='vim ~/.ssh/config'
-alias sb='source ~/.bash_profile'
 alias rm='rm -i'
 if [ `uname` == "Linux" ];then
     alias ls='ls --color=auto'
