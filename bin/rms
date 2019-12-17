@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-
-mkdir ~/garbage 2>/dev/null
-
-mv $@ ~/garbage

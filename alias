@@ -1,4 +1,4 @@
-## Bash
+## Bash alias
 alias sr='source ~/.bash_profile'
 alias vimsshconfig='vim ~/.ssh/config'
 alias rm='rm -i'
@@ -10,14 +10,42 @@ else
     alias grep='grep --color=auto -E'
 fi
 
-
 alias ll='ls -l'
 
-
-## node
+# node
 alias node='node --harmony'
 
-## git 需要安装 git-extra
+# tmux
+alias tmux='tmux -2'
+
+## Bash functions
+function randfile() {
+    # shuffle file
+    filename=${1:?"filename is required"}
+    awk 'BEGIN{srand()} {b[rand()NR]=$0} END{for (i in b) print b[i]}' $filename > .tmp && mv .tmp $filename
+}
+
+function rmlogs() {
+    # remove file with suffix .log at current directory
+    find . -name "*.log" |xargs rm -f 
+}
+
+function rmpyc() {
+    # remove file with suffix .pyc at current directory
+    find . -name "*.pyc" |xargs rm -f
+}
+
+function prettypath() {
+    # display path pretty
+    echo $PATH | awk -v RS=':' '{print $0}'
+}
+
+function sshhosts() {
+    # display ssh hosts in the config
+    sed '/^\s*#/d' ~/.ssh/config| sed -n '/^Host/{N;s/ *Host[a-zA-Z]* *//g;s/\n/  => /p;}'
+}
+
+## need git-extra
 git alias st "status -s" &>/dev/null
 git alias ci commit &>/dev/null
 git alias co checkout &>/dev/null
@@ -27,6 +55,3 @@ git alias lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 git alias lgn "log --pretty=format:'%h - %d %s (%cr) <%an>' --abbrev-commit" &>/dev/null
 git alias ls ls-files &>/dev/null
 
-
-## tmux
-alias tmux='tmux -2'
