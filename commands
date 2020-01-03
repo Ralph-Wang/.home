@@ -1,5 +1,33 @@
 #!/usr/bin/env bash
 
-switch_java() {
+function switch_java() {
+    # switch java version
+    version=${1:?"version is required"}
     export JAVA_HOME=`/usr/libexec/java_home -v $1`
+}
+
+function randfile() {
+    # shuffle file
+    filename=${1:?"filename is required"}
+    awk 'BEGIN{srand()} {b[rand()NR]=$0} END{for (i in b) print b[i]}' $filename > .tmp && mv .tmp $filename
+}
+
+function rmlogs() {
+    # remove file with suffix .log at current directory
+    find . -name "*.log" |xargs rm -f 
+}
+
+function rmpyc() {
+    # remove file with suffix .pyc at current directory
+    find . -name "*.pyc" |xargs rm -f
+}
+
+function prettypath() {
+    # display path pretty
+    echo $PATH | awk -v RS=':' '{print $0}'
+}
+
+function sshhosts() {
+    # display ssh hosts in the config
+    sed '/^\s*#/d' ~/.ssh/config| sed -n '/^Host/{N;s/ *Host[a-zA-Z]* *//g;s/\n/  => /p;}'
 }
