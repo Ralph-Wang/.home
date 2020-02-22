@@ -50,8 +50,6 @@ source ~/.home/alias
 
 source ~/.home/cdmark
 
-source ~/.home/python_virtual_env
-
 # source other environments
 source ~/.home/environments
 
