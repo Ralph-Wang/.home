@@ -1,7 +1,6 @@
 _ssh() {
-    local cur prev opts config_files configd files configs
+    local cur opts config_files configd files configs
     cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     ## complete for ssh configs
     config_files="$HOME/.ssh/config"
