@@ -50,6 +50,8 @@ source ~/.home/alias
 
 source ~/.home/cdmark
 
+source ~/.home/kubeconfig
+
 # source other environments
 source ~/.home/environments
 
