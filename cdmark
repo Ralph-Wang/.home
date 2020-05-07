@@ -17,12 +17,13 @@ function mark {
     if [[ "$m" == "" ]]; then
         m=$_MARKDEFAULT
     fi
+    local target=$(pwd)
     if [[ "$m" == "-" ]]; then
         # use - to mark as current directory name in lower case
-        m=$(basename $(pwd)|tr [:upper:] [:lower:])
+        m=$(basename ${target}|tr [:upper:] [:lower:])
     fi
     rm -f $_MARKPATH/$m
-    ln -s $(pwd) $_MARKPATH/$m
+    ln -s ${target} $_MARKPATH/$m && echo "mark '$m' as '$target'"
 }
 
 function unmark {
