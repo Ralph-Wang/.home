@@ -75,3 +75,5 @@ eval "$(pip completion --bash)"
 
 
 source ~/.home/bash_profile.local # 本地配置, 不进入 git 管理
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
