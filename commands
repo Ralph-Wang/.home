@@ -35,3 +35,7 @@ function sshhosts() {
 function clean_docker(){
     docker images|grep none|awk '{print $3}'|xargs docker rmi
 }
+
+function pretty_json() {
+    python -m json.tool
+}
