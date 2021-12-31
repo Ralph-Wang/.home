@@ -39,3 +39,14 @@ function clean_docker(){
 function pretty_json() {
     python -m json.tool
 }
+
+function fib() {
+    n=${1:-"5"}
+    f0=0
+    f1=1
+    for i in $(seq $n);do
+        echo "$f1";
+        f1=$(($f0 + $f1))
+        f0=$(($f1 - $f0))
+    done
+}
