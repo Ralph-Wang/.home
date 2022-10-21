@@ -35,7 +35,8 @@ export PATH=$GOPATH/bin:$PATH
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 ## nvm mirrors
-export NVM_NODEJS_ORG_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release
+## export NVM_NODEJS_ORG_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 ## flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
