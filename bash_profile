@@ -52,6 +52,10 @@ source ~/.home/cdmark
 
 source ~/.home/kubeconfig
 
+# source list
+source ~/.home/source_list
+
+
 # source other environments
 source ~/.home/environments
 
