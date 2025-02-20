@@ -48440,7 +48440,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2090 385 620 398 1440 -107 1920 1055 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 -107 1865 1055 1440 -107 1920 1055 </string>
+	<string>1440 -107 1920 1055 1440 -107 1920 1055 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2055 -17 825 508 1440 -107 1920 1055 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -48766,6 +48766,8 @@
 			<string>No</string>
 			<key>Description</key>
 			<string>Default</string>
+			<key>Disable Printing</key>
+			<true/>
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
@@ -49257,7 +49259,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>607257658.21048796</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>62</integer>
+	<integer>81</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -49983,16 +49985,16 @@
 	</dict>
 	<key>NoSyncSearchHistory2</key>
 	<array>
-		<string>seriesId</string>
+		<string>pymongo</string>
+		<string>pyenv </string>
+		<string>list</string>
+		<string>lsit</string>
+		<string>filter</string>
+		<string>Filter</string>
+		<string>unlink</string>
 		<string>moblab</string>
-		<string>private</string>
-		<string>2c0</string>
-		<string>cont</string>
-		<string>Register as</string>
-		<string>RegisterAs</string>
-		<string>main</string>
-		<string>where</string>
-		<string>boatIn</string>
+		<string>mobal</string>
+		<string>total</string>
 	</array>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>594979139.77433598</real>
